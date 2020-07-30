@@ -27,6 +27,7 @@ Route::get('/home', 'HomeController@index')->middleware('auth');
  *
  */
 Route::get('/about', 'AboutController@index');
+Route::get('/users-list', 'UsersListController@index');
 
 /**
  *

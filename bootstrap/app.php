@@ -51,5 +51,10 @@ $app->singleton(
 | from the actual running of the application and sending responses.
 |
 */
+$app->bind('UsersList', function($app){
+
+	return new \App\UsersList;
+
+});
 
 return $app;
