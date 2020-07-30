@@ -39,4 +39,9 @@ Route::fallback(function(){
 
 });
 
+/**
+ *
+ * Rotas de autenticação
+ *
+ */
 Auth::routes();
