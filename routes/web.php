@@ -13,10 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index');
-Route::get('/home', 'HomeController@index');
+/**
+ *
+ * Rotas para o usuário logado
+ *
+ */
+Route::get('/', 'HomeController@index')->middleware('auth');
+Route::get('/home', 'HomeController@index')->middleware('auth');
+
+/**
+ *
+ * Rotas públicas
+ *
+ */
 Route::get('/about', 'AboutController@index');
 
+/**
+ *
+ * 404
+ *
+ */
 Route::fallback(function(){
 
 	return view('404');
