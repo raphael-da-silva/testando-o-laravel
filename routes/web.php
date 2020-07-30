@@ -17,4 +17,10 @@ Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/about', 'AboutController@index');
 
+Route::fallback(function(){
+
+	return view('404');
+
+});
+
 Auth::routes();
