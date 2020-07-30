@@ -18,8 +18,12 @@ use Illuminate\Support\Facades\Route;
  * Rotas para o usuário logado
  *
  */
-Route::get('/', 'HomeController@index')->middleware('auth');
-Route::get('/home', 'HomeController@index')->middleware('auth');
+Route::middleware('auth')->group(function(){
+
+	Route::get('/', 'HomeController@index');
+	Route::get('/home', 'HomeController@index');
+
+});
 
 /**
  *
