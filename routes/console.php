@@ -2,6 +2,7 @@
 
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
+use App\Console\Commands\ProjectInfoCommand;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,13 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
+
+/**
+ *
+ * Comando adicionado.
+ *
+ */
+Artisan::command(
+	ProjectInfoCommand::COMMAND_NAME, 
+	ProjectInfoCommand::getClosure()
+)->describe(ProjectInfoCommand::COMMAND_DESC);

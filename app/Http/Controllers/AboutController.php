@@ -17,7 +17,7 @@ class AboutController extends Controller
 	{
 
 		return view('about', [
-			'link' => 'github.com/raphael-da-silva'
+			'link' => getenv('APP_GITHUB_REPO')
 		]);
 
 	}
