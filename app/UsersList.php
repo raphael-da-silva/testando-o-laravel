@@ -2,7 +2,7 @@
 
 namespace App;
 
-//use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 
 /**
  *
@@ -12,10 +12,10 @@ namespace App;
 class UsersList
 {
 
-   	public function getAll()
+   	public function getAll(): array
    	{
 
-   		return [];
+   		return DB::select('SELECT * FROM users');
 
    	}
 
