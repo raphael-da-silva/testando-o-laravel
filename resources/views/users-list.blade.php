@@ -6,7 +6,7 @@
 			Lista de usuário cadastrados
 		</h3>
 
-		<?php if(count($users) > 0){ ?>
+		@if (count($users) > 0)
 
 			<table class="table">
 				<thead>
@@ -17,23 +17,23 @@
 				</thead>
 
 				<tbody>
-					<?php foreach($users as $user){ ?>
+					@foreach ($users as $user)
 
 						<tr>
-							<td><?php echo $user->name; ?></td>
-							<td><?php echo $user->email; ?></td>
+							<td>{{ $user->name }}</td>
+							<td>{{ $user->email }}</td>
 						</tr>
 
-					<?php } ?>
+					@endforeach
 				</tbody>
 			</table>
 
-		<?php }else{ ?>
+		@else
 
 			<div class="alert alert-warning">
 				Nenhum usuário cadastrado.
 			</div>
 
-		<?php } ?>
+		@endif
 	</div>
 @endsection
