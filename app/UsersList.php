@@ -2,8 +2,6 @@
 
 namespace App;
 
-use Illuminate\Support\Facades\DB;
-
 /**
  *
  * @author Raphael da Silva
