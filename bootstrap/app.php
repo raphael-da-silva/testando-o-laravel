@@ -53,7 +53,15 @@ $app->singleton(
 */
 $app->bind('UsersList', function($app){
 
-	return new \App\UsersList;
+	return new \App\LaravelDBUsersList;
+
+});
+
+$app->bind(\App\Http\Controllers\UsersListController::class, function($app){
+
+	return new \App\Http\Controllers\UsersListController(
+		$app->make('UsersList')
+	);
 
 });
 
