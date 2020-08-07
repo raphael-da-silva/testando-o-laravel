@@ -11,6 +11,8 @@ Este é um teste para ter uma noção de como o Laravel funciona. O projeto tem 
 * Adicionei um comando para ser executado (`./artistan project-info`).
 * Criei uma listagem básica de usuários.
 * Injetei a dependência no controller da listagem.
+* Usei o container para registrar as dependências para serem resolvidas.
+* Criei uma visualização de dados do usuário.
 
 ### Observações
 
