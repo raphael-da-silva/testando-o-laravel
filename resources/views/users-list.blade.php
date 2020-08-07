@@ -19,6 +19,7 @@
 					<tr>
 						<th>Nome</th>
 						<th>E-mail</th>
+						<th>Detalhes</th>
 					</tr>
 				</thead>
 
@@ -28,6 +29,9 @@
 						<tr>
 							<td>{{ $user->name }}</td>
 							<td>{{ $user->email }}</td>
+							<td>
+								<a href="{{ url('user/' . $user->id) }}">Ver</a>
+							</td>
 						</tr>
 
 					@endforeach

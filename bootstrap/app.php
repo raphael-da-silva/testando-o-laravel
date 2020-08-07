@@ -57,11 +57,25 @@ $app->bind('UsersList', function($app){
 
 });
 
+$app->bind('UserFinder', function($app){
+
+    return new \App\LaravelDBUserFinder;
+
+});
+
 $app->bind(\App\Http\Controllers\UsersListController::class, function($app){
 
 	return new \App\Http\Controllers\UsersListController(
 		$app->make('UsersList')
 	);
+
+});
+
+$app->bind(\App\Http\Controllers\UserDetailsController::class, function($app){
+
+    return new \App\Http\Controllers\UserDetailsController(
+        $app->make('UserFinder')
+    );
 
 });
 

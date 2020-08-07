@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function(){
  */
 Route::get('/about', 'AboutController@index');
 Route::get('/users-list', 'UsersListController@index');
+Route::get('/user/{id}', 'UserDetailsController@index');
 
 /**
  *
