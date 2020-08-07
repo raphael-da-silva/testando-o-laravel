@@ -51,32 +51,5 @@ $app->singleton(
 | from the actual running of the application and sending responses.
 |
 */
-$app->bind('UsersList', function($app){
-
-	return new \App\LaravelDBUsersList;
-
-});
-
-$app->bind('UserFinder', function($app){
-
-    return new \App\LaravelDBUserFinder;
-
-});
-
-$app->bind(\App\Http\Controllers\UsersListController::class, function($app){
-
-	return new \App\Http\Controllers\UsersListController(
-		$app->make('UsersList')
-	);
-
-});
-
-$app->bind(\App\Http\Controllers\UserDetailsController::class, function($app){
-
-    return new \App\Http\Controllers\UserDetailsController(
-        $app->make('UserFinder')
-    );
-
-});
 
 return $app;
