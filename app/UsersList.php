@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Illuminate\Support\Collection;
+
 /**
  *
  * @author Raphael da Silva
@@ -10,6 +12,6 @@ namespace App;
 interface UsersList
 {
 
-   	public function getAll(): array;
+   	public function getAll(): Collection;
 
 }

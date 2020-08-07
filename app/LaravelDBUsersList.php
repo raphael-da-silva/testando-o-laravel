@@ -3,6 +3,7 @@
 namespace App;
 
 use App\UsersList;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -13,10 +14,10 @@ use Illuminate\Support\Facades\DB;
 class LaravelDBUsersList implements UsersList 
 {
 
-   	public function getAll(): array
+   	public function getAll(): Collection
    	{
 
-   		return DB::select('SELECT * FROM users');
+   		return DB::table('users')->get();
 
    	}
 

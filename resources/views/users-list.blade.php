@@ -6,7 +6,13 @@
 			Lista de usuário cadastrados
 		</h3>
 
+		<hr>
+
 		@if (count($users) > 0)
+
+			<div class="alert alert-info">
+				Total de usuários: {{ $users->count() }}
+			</div>
 
 			<table class="table">
 				<thead>
