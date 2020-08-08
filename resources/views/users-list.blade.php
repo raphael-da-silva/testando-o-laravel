@@ -30,7 +30,7 @@
 							<td>{{ $user->name }}</td>
 							<td>{{ $user->email }}</td>
 							<td>
-								<a href="{{ url('user/' . $user->id) }}">Ver</a>
+								<a href="{{ url('user', $user->id) }}">Ver</a>
 							</td>
 						</tr>
 
