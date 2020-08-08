@@ -8,7 +8,7 @@
 
 		<hr>
 
-		@if (count($users) > 0)
+		@if ($users->count() > 0)
 
 			<div class="alert alert-info">
 				Total de usuários: {{ $users->count() }}
