@@ -5,6 +5,7 @@ namespace App;
 use App\UserFinder;
 use Illuminate\Support\Facades\DB;
 use \stdClass as User;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 /**
  *
@@ -17,7 +18,13 @@ class LaravelDBUserFinder implements UserFinder
    	public function getById(int $id): User
    	{
 
-   		return DB::table('users')->find($id);
+   		$user = DB::table('users')->find($id);
+
+   		if(is_null($user)){
+   			throw new ModelNotFoundException('User not found.');
+   		}
+
+   		return $user;
 
    	}
 

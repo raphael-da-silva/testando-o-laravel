@@ -39,11 +39,11 @@ Route::get('/user/{id}', 'UserDetailsController@index');
  * 404
  *
  */
-Route::fallback(function(){
+// Route::fallback(function(){
 
-	return view('404');
+// 	return view('404');
 
-});
+// });
 
 /**
  *
