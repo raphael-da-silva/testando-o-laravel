@@ -20,3 +20,9 @@ Este é um teste para ter uma noção de como o Laravel funciona. O projeto tem 
 ### Observações
 
 Tive problemas com o cache de configuração do artisan que não leu corretamnte o arquivo .env (lembrar de não usar esse recurso).
+
+
+# Analise do projeto
+
+Artigo escrito sobre o uso de interfaces nas classes desse projeto: https://dev.to/raphaeldasilva/injecao-de-dependencia-interfaces-e-laravel-3g4l
+
